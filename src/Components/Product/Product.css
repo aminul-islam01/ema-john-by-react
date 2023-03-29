@@ -1,0 +1,50 @@
+.product {
+    height: 508px;
+    border: 1px solid #95A0A7;
+    border-radius: 8px;
+    padding: 7px;
+    position: relative;
+    box-shadow: 5px 5px 10px #ddd;
+}
+.product img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+.product-details {
+    text-align: left;
+    margin: 10px;
+}
+.product-details h3{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 0.0015em;
+    margin-bottom: 11px;
+}
+.add-btn{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #FFE0B3;
+    width: 100%;
+    transition: 0.5s;
+}
+.add-btn:hover{
+    background-color: rgba(255, 0, 0, 0.627);
+}
+.rating {
+    position: absolute;
+    bottom: 50px;
+}
+
+@media screen and (max-width: 576px){
+    .product {
+        height: 550px;
+    }
+}
+
+@media screen and (min-width:577px) and (max-width:768px) {
+    
+}
