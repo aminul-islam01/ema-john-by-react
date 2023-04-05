@@ -34,7 +34,7 @@ const Shop = () => {
                 // step:5 addedProduct object push to saveCart array 
                 saveCart.push(addedProduct);
             }
-            console.log(addedProduct)
+            // console.log(addedProduct)
         }
         // step:6 saveCart array set to setCart-state 
         setCart(saveCart);
@@ -76,7 +76,7 @@ const Shop = () => {
                 <Cart 
                 cart={cart}
                 handleClearCart={handleClearCart}>
-                    <Link to="/orders">
+                    <Link to="/orders" className='link'>
                         <button className='btn-common'>Review Order
                         <FontAwesomeIcon icon={faArrowRightLong} />
                         </button>

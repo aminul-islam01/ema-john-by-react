@@ -38,6 +38,9 @@
     margin-bottom: 16px;
 }
 
+.link {
+    text-decoration: none;
+}
 .btn-common {
     width: 90%;
     display: block;
