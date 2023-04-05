@@ -1,0 +1,6 @@
+.order-container {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    margin: 100px 100px 0;
+    gap: 144px;
+}
