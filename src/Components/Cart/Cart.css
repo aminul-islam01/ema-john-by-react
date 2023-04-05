@@ -26,3 +26,25 @@
     font-size: 21px;
     padding-bottom: 57px;
 }
+.btn-clear {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    background: #FF3030;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.btn-common {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    background: #FF9900;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
