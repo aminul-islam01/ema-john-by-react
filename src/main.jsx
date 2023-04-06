@@ -23,7 +23,7 @@ const router = createBrowserRouter([
         element: <Shop></Shop>
       },
       {
-        path: "orders",
+        path: "/orders",
         element: <Orders></Orders>,
         loader: cartProductsLoader
       },
@@ -38,10 +38,10 @@ const router = createBrowserRouter([
       {
         path: "login",
         element: <Login></Login>
-      }
-    ]
-  }
-]);
+      },
+    ],
+  },
+])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
