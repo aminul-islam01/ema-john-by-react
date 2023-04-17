@@ -15,6 +15,7 @@ import App from './App';
 import AuthProviders from './Providers/AuthProviders';
 import Register from './Components/SignUp/SignUp';
 import SignUp from './Components/SignUp/SignUp';
+import PrivateRoute from './Routes/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
       },
       {
         path: "checkout",
-        element: <Checkout></Checkout>
+        element: <PrivateRoute><Checkout></Checkout></PrivateRoute>
       },
       {
         path: "sign-up",
