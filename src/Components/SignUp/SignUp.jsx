@@ -41,11 +41,11 @@ const SignUp = () => {
                 </div>
                 <div>
                     <label htmlFor="password">Password</label>
-                    <input type="text" placeholder="password" name="password" required />
+                    <input type="password" placeholder="password" name="password" required />
                 </div>
                 <div>
                     <label htmlFor="ConfirmPassword">Confirm Password</label>
-                    <input type="text" placeholder="Confirm Password" name="ConfirmPassword" required />
+                    <input type="password" placeholder="Confirm Password" name="ConfirmPassword" required />
                 </div>
                 <div>
                     <button className="btn-login">Sign Up</button>

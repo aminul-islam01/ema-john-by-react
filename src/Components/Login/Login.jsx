@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import './Login.css'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { UserContext } from '../../Providers/AuthProviders';
@@ -6,6 +6,8 @@ import { UserContext } from '../../Providers/AuthProviders';
 
 
 const Login = () => {
+    const [show, setShow] = useState(false);
+    
     const {loginUser} = useContext(UserContext);
     const Navigate = useNavigate();
     const location = useLocation();
@@ -41,7 +43,13 @@ const Login = () => {
                 </div>
                 <div>
                     <label htmlFor="password">Password</label>
-                    <input type="text" placeholder="password" name="password" required />
+                    <input type={show? 'text': 'password'} placeholder="password" name="password" required />
+                    <p onClick={()=>setShow(!show)}>
+                       {
+                        show? <span>Hide password</span>
+                        : <span>Show password</span>
+                       }
+                    </p>
                 </div>
                 <div>
                     <button className="btn-login">Login</button>
