@@ -13,7 +13,6 @@ import cartProductsLoader from './CartProductsLoader/cartProductsLoader';
 import Checkout from './Components/Checkout/Checkout';
 import App from './App';
 import AuthProviders from './Providers/AuthProviders';
-import Register from './Components/SignUp/SignUp';
 import SignUp from './Components/SignUp/SignUp';
 import PrivateRoute from './Routes/PrivateRoute';
 
@@ -24,7 +23,8 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Shop></Shop>
+        element: <Shop></Shop>,
+        loader: () => fetch('http://localhost:5000/totalProducts')
       },
       {
         path: "/orders",

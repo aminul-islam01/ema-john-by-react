@@ -11,6 +11,12 @@
     margin-top: 100px;
     margin-right: 80px;
 }
+.pagination {
+    margin-bottom: 50px;
+}
+.selected{
+    background-color: chartreuse;
+}
 
 @media screen and (max-width: 576px){
     .shop-container {
