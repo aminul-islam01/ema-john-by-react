@@ -1,7 +1,7 @@
 .cart {
     background-color: #FFE0B3;
     position: sticky;
-    top: 0;
+    top: 75px;
     height: 100vh;
 }
 .cart h5 {
