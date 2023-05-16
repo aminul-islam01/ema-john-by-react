@@ -9,6 +9,7 @@ import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
 
 const Shop = () => {
     const [products, setProducts] = useState([]);
+    const [cardProducts, setCardProducts] = useState([]);
     const [cart, setCart] = useState([]);
     const [currentPage, setCurrentPage] = useState(0);
     const [itemsPerpage, setItemsPerpage] = useState(10)
@@ -16,8 +17,9 @@ const Shop = () => {
 
     const totalPages = Math.ceil(totalProducts / itemsPerpage);
 
+    // get array index
     const pagesNumbers = [...Array(totalPages).keys()]
-    
+
     // useEffect(() => {
     //     fetch('http://localhost:5000/products')
     //         .then(res => res.json())
@@ -33,14 +35,26 @@ const Shop = () => {
         }
         fetchData();
     }, [currentPage, itemsPerpage])
-    
+
     useEffect(() => {
         const storedCart = getShoppingCart();
+        const ids = Object.keys(storedCart);
+
+        fetch('http://localhost:5000/productsByIds', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(ids)
+        })
+        .then(res => res.json())
+        .then(data => setCardProducts(data))
+
         const saveCart = [];
         //step:1 get id from localStorage
         for (const id in storedCart) {
             // step:2 get products array using this id 
-            const addedProduct = products.find(product => product._id === id);
+            const addedProduct = cardProducts.find(product => product._id === id);
             if (addedProduct) {
                 //  step:3 get product quantity from localStorage
                 const quantity = storedCart[id];
@@ -122,7 +136,7 @@ const Shop = () => {
                         <option key={option} value={option}>
                             {option}
                         </option>
-                    ))}     
+                    ))}
                 </select>
             </div>
         </>

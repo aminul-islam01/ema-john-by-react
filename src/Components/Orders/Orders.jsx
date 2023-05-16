@@ -9,6 +9,7 @@ import { faCreditCard } from '@fortawesome/free-solid-svg-icons'
 
 const Orders = () => {
     const savedCart = useLoaderData();
+    // console.log(savedCart)
     const [cart, setCart] = useState(savedCart);
     const handleRemoveCart = (id) => {
         const remaining = cart.filter(product => product._id !== id);
